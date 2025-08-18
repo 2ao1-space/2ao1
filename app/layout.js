@@ -57,9 +57,6 @@ export default function RootLayout({ children }) {
           id="page-content"
           className="bg-tertiary relative p-4 container mx-auto"
         >
-          <h1 className="font-mainHead text-main text-4xl mb-4">ArefB Font</h1>
-          <h2 className="font-subhead text-main text-2xl mb-4">Aeonik Font</h2>
-          <h3 className="font-anton text-main text-xl mb-4">Anton Font</h3>
           {children}
         </main>
       </body>

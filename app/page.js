@@ -1,3 +1,7 @@
 export default function page() {
-  return <div>test</div>;
+  return (
+    <div className="text-5xl font-mainhead text-main">
+      welcome to my portfolio.
+    </div>
+  );
 }
