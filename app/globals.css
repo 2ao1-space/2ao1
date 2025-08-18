@@ -1,0 +1,33 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Fonts */
+@font-face {
+  font-family: "Anton";
+  src: url("/public/fonts/Anton-Regular.ttf");
+}
+@font-face {
+  font-family: "ArefB";
+  src: url("/public/fonts/ArefRuqaaInk-Bold.ttf");
+}
+@font-face {
+  font-family: "Aeonik";
+  src: url("/public/fonts/AeonikTRIAL-Regular.otf");
+}
+
+/* Custom animation helpers */
+.lines {
+  overflow-y: hidden;
+  will-change: transform, opacity;
+}
+
+.char {
+  overflow-y: hidden;
+  will-change: transform, opacity;
+}
+
+.word {
+  overflow-y: hidden;
+  will-change: transform, opacity;
+}
