@@ -1,33 +1,28 @@
 import localFont from "next/font/local";
 import Script from "next/script";
-
 import "./globals.css";
 
 export const aref = localFont({
   src: "../public/fonts/ArefRuqaaInk-Bold.ttf",
   variable: "--font-aref",
+  display: "swap",
 });
+
 export const aeonik = localFont({
   src: "../public/fonts/AeonikTRIAL-Regular.otf",
   variable: "--font-aeonik",
+  display: "swap",
+});
+
+export const anton = localFont({
+  src: "../public/fonts/Anton-Regular.ttf",
+  variable: "--font-anton",
+  display: "swap",
 });
 
 export const metadata = {
-  // title: `${info.name} | ${info.role}`,
-  description:
-    "Ahmed Omran's Portfolio - Front-End Developer specializing in HTML, CSS, JavaScript, and React. Check out my projects and contact me.",
-  keywords: [
-    "Ahmed Omran",
-    "Frontend Developer",
-    "React",
-    "Next.js",
-    "JavaScript",
-    "TypeScript",
-    "Portfolio",
-    "2ao1",
-    "ao",
-    "AO",
-  ],
+  description: "Ahmed Omran's Portfolio - Front-End Developer",
+  keywords: ["Ahmed Omran", "Frontend Developer", "React", "Next.js"],
   authors: [{ name: "Ahmed Omran" }],
   icons: {
     icon: "/favicon.png",
@@ -36,9 +31,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${aref.variable} ${aeonik.variable} ${anton.variable}`}
+    >
       <head>
-        {/* Google tag (gtag.js) */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-G39QYJSQQB"
@@ -55,16 +52,14 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="bg-tertiary relative font-subhead text-primary-800">
+      <body className="bg-tertiary font-subhead text-primary-800">
         <main
           id="page-content"
-          className="bg-tertiary bg-amber-200 relative p-4 container mx-auto"
+          className="bg-tertiary relative p-4 container mx-auto"
         >
-          <h1 className={`${aref.variable} font-mainHead text-main`}>
-            heyyyyy
-          </h1>
-          <h1 className="text-main ">hey</h1>
-          {/* className="bg-tertiary relative p-4 container mx-auto opacity-0" */}
+          <h1 className="font-mainHead text-main text-4xl mb-4">ArefB Font</h1>
+          <h2 className="font-subhead text-main text-2xl mb-4">Aeonik Font</h2>
+          <h3 className="font-anton text-main text-xl mb-4">Anton Font</h3>
           {children}
         </main>
       </body>

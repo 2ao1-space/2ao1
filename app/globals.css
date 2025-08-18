@@ -1,19 +1,29 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Fonts */
 @font-face {
   font-family: "Anton";
-  src: url("/public/fonts/Anton-Regular.ttf");
+  src: url("/fonts/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "ArefB";
-  src: url("/public/fonts/ArefRuqaaInk-Bold.ttf");
+  src: url("/fonts/ArefRuqaaInk-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
   font-family: "Aeonik";
-  src: url("/public/fonts/AeonikTRIAL-Regular.otf");
+  src: url("/fonts/AeonikTRIAL-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Custom animation helpers */

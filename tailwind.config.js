@@ -1,15 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
   theme: {
     fontFamily: {
+      // تطابق مع أسماء الخطوط في CSS
       mainHead: ["ArefB", "serif"],
-      subhead: ["Aeonik", "Anton"],
+      subhead: ["Aeonik", "sans-serif"],
+      anton: ["Anton", "sans-serif"],
+      // إضافة خطوط النظام كـ fallback
+      sans: ["Aeonik", "ui-sans-serif", "system-ui"],
+      serif: ["ArefB", "ui-serif", "Georgia"],
     },
 
     extend: {
@@ -33,7 +41,6 @@ module.exports = {
           800: "#2c3333",
           900: "#212529",
         },
-
         secondary: {
           50: "#f8f9fa",
           100: "#f1f3f4",
@@ -46,7 +53,6 @@ module.exports = {
           800: "#4e4e4e",
           900: "#3f3f3f",
         },
-
         tertiary: "#f8f8f8",
       },
 
