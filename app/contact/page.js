@@ -1,7 +1,15 @@
+import ContactPart from "./_components/ContactPart";
+
 export const metadata = {
   title: "contact me | My Portfolio",
 };
 
 export default function Contact() {
-  return <h1>contact Me</h1>;
+  return (
+    <>
+      <section className="h-screen container mx-auto">
+        <ContactPart />
+      </section>
+    </>
+  );
 }
