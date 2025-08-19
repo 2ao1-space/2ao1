@@ -1,24 +1,5 @@
-import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
-
-export const aref = localFont({
-  src: "../public/fonts/ArefRuqaaInk-Bold.ttf",
-  variable: "--font-aref",
-  display: "swap",
-});
-
-export const aeonik = localFont({
-  src: "../public/fonts/AeonikTRIAL-Regular.otf",
-  variable: "--font-aeonik",
-  display: "swap",
-});
-
-export const anton = localFont({
-  src: "../public/fonts/Anton-Regular.ttf",
-  variable: "--font-anton",
-  display: "swap",
-});
 
 export const metadata = {
   description: "Ahmed Omran's Portfolio - Front-End Developer",
@@ -31,10 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${aref.variable} ${aeonik.variable} ${anton.variable}`}
-    >
+    <html lang="en">
       <head>
         <Script
           async

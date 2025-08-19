@@ -1,7 +1,7 @@
 import ContactPart from "./_components/ContactPart";
 
 export const metadata = {
-  title: "contact me | My Portfolio",
+  title: "contact me",
 };
 
 export default function Contact() {
