@@ -122,22 +122,22 @@
   "social": [
     {
       "name": "Resume",
-      "icon": "<File />",
+      "icon": "<LuFile />",
       "path": "/resume"
     },
     {
-      "name": "Github",
-      "icon": "<Github />",
+      "name": "GitHub",
+      "icon": "<LuGithub />",
       "path": "https://github.com/2ao1-1"
     },
     {
       "name": "Linkedin",
-      "icon": "<Linkedin />",
+      "icon": "<LuLinkedin />",
       "path": "https://www.linkedin.com/in/ahmed-omran-2ao1/"
     },
     {
       "name": "Instagram",
-      "icon": "<Instagram />",
+      "icon": "<LuInstagram />",
       "path": "https://www.instagram.com/10.7.2ao1/"
     }
   ],

@@ -1,5 +1,6 @@
 import Script from "next/script";
 import "./globals.css";
+import Header from "./_components/Header";
 
 export const metadata = {
   description: "Ahmed Omran's Portfolio - Front-End Developer",
@@ -33,8 +34,11 @@ export default function RootLayout({ children }) {
       <body className="bg-tertiary font-subhead text-primary-800">
         <main
           id="page-content"
-          className="bg-tertiary relative p-4 container mx-auto"
+          className="bg-tertiary relative px-4 container mx-auto"
         >
+          {/* Header */}
+          <Header />
+
           {children}
         </main>
       </body>

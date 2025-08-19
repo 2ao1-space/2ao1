@@ -107,7 +107,7 @@ export default function ContactPart() {
       </div>
 
       {/* Loading states */}
-      {!email && isMounted && <EmailLoadingState />}
+      {/* {!email && isMounted && <EmailLoadingState />} */}
       {isLoading && <SendingLoader />}
     </div>
   );
