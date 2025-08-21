@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header className="sticky md:relative top-0 left-0 z-50 bg-tertiary border-b border-primary-900">
-      <div className="container m-auto flex justify-between items-center font-subhead text-xs py-1 md:py-4">
+      <div className="container m-auto flex justify-between items-center font-subhead text-base md:text-sm py-1 md:py-4">
         {/* name & role */}
         <NameAndRole />
         {/* status */}

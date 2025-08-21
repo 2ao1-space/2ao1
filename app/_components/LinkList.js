@@ -12,7 +12,7 @@ export default function LinkList({
     <ul className={`flex flex-wrap ${width} ${className}`}>
       {items.map((item, index) => (
         <li key={index} className="mr-2">
-          <div className="flex h-4 justify-start">
+          <div className="flex h-6 md:h-4 justify-start">
             <AnimatedLink
               href={item.link || item.path}
               target={

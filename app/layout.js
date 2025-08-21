@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="bg-tertiary font-subhead text-primary-800 px-2">
+      <body className="bg-tertiary font-subhead text-primary-800 px-4">
         <main
           id="page-content"
           className="relative container mx-auto cursor-default"

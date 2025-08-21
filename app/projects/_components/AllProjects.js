@@ -12,12 +12,12 @@ export default function AllProjects({ allProjects }) {
           className="col-span-12 md:col-span-6 border-b border-primary-600 pb-4 mb-4"
         >
           <div className=" relative group overflow-hidden">
-            <div className="w-full h-[150px] md:h-[300px]">
+            <div className="w-full h-[180px] md:h-[300px]">
               <ProjectImage
                 src={project.img}
                 alt={project.title}
                 loading={"eager"}
-                className="w-full h-[150px] md:h-[300px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out"
+                className="w-full h-[180px] md:h-[300px] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out"
               />
             </div>
 

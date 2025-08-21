@@ -11,12 +11,12 @@ export default function RedirectBtns({
 }) {
   return (
     <div className={`${className}`}>
-      <span className="redirect-btns overflow-y-hidden h-4 md:h-auto">
+      <span className="redirect-btns overflow-y-hidden h-6">
         <AnimatedLink href={href1} target={target1}>
           [ {link1} ]
         </AnimatedLink>
       </span>
-      <span className="redirect-btns overflow-y-hidden h-4 md:h-auto">
+      <span className="redirect-btns overflow-y-hidden h-6">
         <AnimatedLink href={href2} target={target2}>
           [ {link2} ]
         </AnimatedLink>

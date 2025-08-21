@@ -3,23 +3,23 @@ import ProjectImage from "../../_components/ProjectImage";
 
 export default function LastOne({ projects }) {
   return (
-    <div className="flex flex-col md:flex-row gap-4 border-b border-primary-900 md:pb-4 md:mb-4 group">
+    <div className="flex flex-col md:flex-row gap-4 border-b border-primary-900 mb-4 md:pb-8 md:mb-8 group">
       <div className="w-full md:w-1/2 relative flex flex-col justify-between">
         {/* <!-- Project Details --> */}
         <div className="flex justify-between items-center">
           <div className="w-1/2 flex justify-start md:justify-start flex-col md:flex-row md:gap-12 items-start md:items-center">
-            <span className="text-primary-500 text-xs uppercase">
+            <span className="text-primary-500 text-sm uppercase">
               Project Name :{" "}
             </span>
-            <h6 className="text-xs md:text-xl uppercase font-mainHead text-main">
+            <h6 className="text-base md:text-xl uppercase font-mainHead text-main">
               {projects[0].title}
             </h6>
           </div>
           <div className="w-1/2 flex justify-start md:justify-start flex-col md:flex-row md:gap-12 items-start md:items-center">
-            <span className="text-primary-500 text-xs uppercase">
+            <span className="text-primary-500 text-sm uppercase">
               Client :{" "}
             </span>
-            <span className="text-xs md:text-xl uppercase font-mainHead text-main">
+            <span className="text-base md:text-xl uppercase font-mainHead text-main">
               {projects[0].client}
             </span>
           </div>

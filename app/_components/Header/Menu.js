@@ -61,14 +61,16 @@ export default function Menu({ status, timeStr }) {
             <LuX />
           </button>
 
-          {/* name & role */}
-          <NameAndRole />
-          {/* status */}
-          <Status status={status} timeStr={timeStr} />
-          {/* sitemap */}
-          <Sitemap />
-          {/* social */}
-          <Social />
+          <div className="grid justify-between flex-grow">
+            {/* name & role */}
+            <NameAndRole />
+            {/* status */}
+            <Status status={status} timeStr={timeStr} />
+            {/* sitemap */}
+            <Sitemap />
+            {/* social */}
+            <Social />
+          </div>
         </div>
       )}
     </>

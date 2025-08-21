@@ -103,7 +103,7 @@ export default function ContactPart() {
         <Btn
           onClick={sendEmail}
           disabled={isLoading || !email}
-          className="text-sm md:text-base h-6 md:h-8 bg-primary-800 hover:bg-main text-tertiary px-4 rounded-full transition-all duration-500"
+          className="text-sm md:text-base h-10 md:h-12 bg-primary-800 hover:bg-main text-tertiary py-2 px-4 rounded-full transition-all duration-500"
         >
           {isLoading ? "Sending..." : "[ Send Message ]"}
         </Btn>

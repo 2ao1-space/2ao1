@@ -40,9 +40,9 @@ export default function Footer({ prevPage = "", nextPage = "" }) {
   return (
     <footer
       ref={footerRef}
-      className="container mx-auto font-subhead border-t border-primary-900 pt-2 pb-4 flex justify-between items-center"
+      className="container mx-auto font-subhead border-t border-primary-900 py-4 flex flex-col-reverse md:flex-row justify-between items-center"
     >
-      <div className="flex text-xs uppercase overflow-hidden">
+      <div className="w-1/2 flex text-sm uppercase overflow-hidden py-4 md:py-0">
         <span className="hidden sm:block split-text">
           {`${info.name} , 2025 © All Rights Reserved`}
         </span>
@@ -52,7 +52,7 @@ export default function Footer({ prevPage = "", nextPage = "" }) {
       <FooterNav
         nextPage={nextPage}
         prevPage={prevPage}
-        className={`text-xs h-4 md:text-base md:h-auto`}
+        className={`h-6 md:h-4 text-sm md:text-base flex justify-between md:justify-end items-center w-full md:w-1/2`}
       />
     </footer>
   );

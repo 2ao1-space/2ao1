@@ -84,12 +84,12 @@ export default function ProjectPage({ params }) {
       {/* more details about the project */}
       <div className="w-full py-20 font-content">
         {/* bio */}
-        <p className="w-full md:w-2/3 text-base md:text-4xl font-bold">
+        <p className="w-full md:w-2/3 text-xl md:text-4xl font-bold">
           {project.bio}
         </p>
         {/* description */}
         <div className="flex justify-end py-12">
-          <p className="w-full md:w-1/2 uppercase text-xs md:text-sm">
+          <p className="w-full md:w-1/2 uppercase text-sm md:text-base">
             {project.description}
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function ProjectPage({ params }) {
         <div className="w-1/2 flex justify-between items-end group">
           <AnimatedLink
             href={`/projects/${prevSlug}`}
-            className="text-primary-900 group-hover:text-main text-xs md:text-base h-4 md:h-8"
+            className="text-primary-900 group-hover:text-main text-sm md:text-base h-4 md:h-8"
           >
             ← {prevProject.title}
           </AnimatedLink>
@@ -134,14 +134,14 @@ export default function ProjectPage({ params }) {
 
           <AnimatedLink
             href={`/projects/${nextSlug}`}
-            className="text-primary-900 group-hover:text-main text-xs md:text-base h-4 md:h-8"
+            className="text-primary-900 group-hover:text-main text-sm md:text-base h-4 md:h-8"
           >
             {nextProject.title} →
           </AnimatedLink>
         </div>
       </div>
 
-      <Footer prevPage="/projects" nextPage="/projects" />
+      <Footer prevPage="/projects" nextPage="/contact" />
     </>
   );
 }

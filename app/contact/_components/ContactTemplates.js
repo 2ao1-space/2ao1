@@ -1,6 +1,6 @@
 export const ContactTemplates = {
   "new-project": (renderInput) => (
-    <p className="text-base sm:text-xl md:text-4xl font-mainHead leading-relaxed text-black dark:text-white">
+    <p className="text-xl sm:text-2xl md:text-4xl font-mainHead leading-relaxed text-black dark:text-white">
       Hey Ahmed, my name is {renderInput("name", "[your name]")}. I would like
       to start a new project with you. I'm looking for{" "}
       {renderInput("service", "[type a service]")}. The timing for this project
@@ -11,7 +11,7 @@ export const ContactTemplates = {
   ),
 
   collab: (renderInput) => (
-    <p className="text-base sm:text-xl md:text-4xl font-mainHead leading-relaxed text-black dark:text-white">
+    <p className="text-xl sm:text-2xl md:text-4xl font-mainHead leading-relaxed text-black dark:text-white">
       What's up Ahmed! I'm {renderInput("name", "[your name]")},{" "}
       {renderInput("timeframe", "[your role]")} here. Got this awesome project
       idea about {renderInput("service", "[the service subject]")} and I think

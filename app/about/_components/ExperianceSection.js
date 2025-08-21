@@ -16,7 +16,7 @@ export default function ExperianceSection() {
         <AnimatedLink
           href={expLink.path}
           target="_blank"
-          className="text-xs md:text-base h-4 md:h-8"
+          className="text-sm md:text-base h-6 md:h-8"
         >
           [{expLink.name}]
         </AnimatedLink>

@@ -27,6 +27,9 @@ export default function Projects() {
         {/* <!-- Last project --> */}
         <LastOne projects={projects} />
 
+        <p className="md:hidden text-xs text-center text-primary-400 py-4 mx-auto">
+          [ Tap on project view more ]
+        </p>
         {/* <!-- All projects --> */}
         <AllProjects allProjects={allProjects} />
       </div>

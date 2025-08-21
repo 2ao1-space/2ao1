@@ -4,7 +4,7 @@ import ProjectSpan from "./ProjectSpan";
 export default function ProjectDetails({ project }) {
   return (
     <>
-      <div className="grid grid-cols-2 md:py-12">
+      <div className="grid grid-cols-2 md:py-12 gap-2">
         {/* project title */}
         <h4 className="col-span-2 text-5xl py-4 font-mainHead border-b text-main">
           {project.title}
@@ -20,7 +20,7 @@ export default function ProjectDetails({ project }) {
         <ProjectSpan
           title="Copyright"
           project="&copy; All Rights Reserved"
-          className="text-xs md:text-base"
+          className="text-sm md:text-base"
         />
       </div>
       {/* Btn : live, code */}

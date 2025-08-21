@@ -15,12 +15,13 @@ export default function LastPContent({ project }) {
       />
 
       {/* project main info: title , button to show more */}
-      <div className="flex flex-col md:flex-row md:justify-between    items-end flex-1 gap-4 mt-4">
-        <h5 className="overlay-text text-3xl sm:text-4xl lg:text-6xl xl:text-8xl font-subhead">
+      <div className="flex flex-col md:flex-row md:justify-between items-end flex-1 gap-4 mt-4">
+        <h5 className="overlay-text text-4xl lg:text-6xl xl:text-8xl font-subhead">
           {project.title}
         </h5>
 
         <AnimatedLink
+          className="text-sm"
           href={`/projects/${project.title.toLowerCase().replace(" ", "-")}`}
         >
           [ View Case ]

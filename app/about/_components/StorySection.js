@@ -10,14 +10,14 @@ export default function StorySection() {
           loading={"eager"}
           width={200}
           height={200}
-          className={`w-24 md:w-[200px] mx-auto md:mx-0 mb-8`}
+          className={`w-[150px] md:w-[200px] mx-auto md:mx-0 mb-8`}
         />
       </div>
 
       {/* personal story */}
       <div className="col-span-8 md:col-span-6 uppercase ">
         {info.story.map((text, index) => (
-          <p key={index} className="text-xs mb-4 md:text-sm">
+          <p key={index} className="text-base mb-4 md:text-sm">
             {text}
           </p>
         ))}
