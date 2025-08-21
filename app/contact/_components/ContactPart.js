@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
 import { useEmailJS } from "../_hooks/useEmailJs";
+
 import { validateForm } from "../_utils/formValidation";
 import { sendEmailService } from "../_utils/emailService";
+
 import { DynamicInput } from "./DynamicInput";
 import { ProjectTypeSelector } from "./ProjectTypeSelector";
 import { ContactTemplates } from "./ContactTemplates";
-import { EmailLoadingState, SendingLoader } from "./LoadingStates";
+import { EmailLoadingState } from "./LoadingStates";
+
 import Btn from "../../_components/Btn";
 
 export default function ContactPart() {
@@ -40,7 +43,7 @@ export default function ContactPart() {
 
   const handleProjectTypeChange = (type) => {
     setProjectType(type);
-    // Reset form when switching project types but keep name and email
+
     setFormData((prevData) => ({
       name: prevData.name,
       email: prevData.email,
@@ -100,14 +103,14 @@ export default function ContactPart() {
         <Btn
           onClick={sendEmail}
           disabled={isLoading || !email}
-          className="bg-primary-800 hover:bg-main text-tertiary px-4 rounded-full transition-all duration-500"
+          className="text-sm md:text-base h-6 md:h-8 bg-primary-800 hover:bg-main text-tertiary px-4 rounded-full transition-all duration-500"
         >
           {isLoading ? "Sending..." : "[ Send Message ]"}
         </Btn>
       </div>
 
       {/* Loading states */}
-      {/* {!email && isMounted && <EmailLoadingState />} */}
+      {!email && isMounted && <EmailLoadingState />}
       {isLoading && <SendingLoader />}
     </div>
   );

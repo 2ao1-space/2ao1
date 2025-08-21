@@ -1,11 +1,9 @@
 "use client";
-
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import { gsap } from "gsap";
-import info from "../_data/info.json";
-import AnimatedLink from "./AnimatedLink";
 
+import info from "../_data/info.json";
+import FooterNav from "./Footer/FooterNav";
 export default function Footer({ prevPage = "", nextPage = "" }) {
   const footerRef = useRef(null);
 
@@ -45,30 +43,17 @@ export default function Footer({ prevPage = "", nextPage = "" }) {
       className="container mx-auto font-subhead border-t border-primary-900 pt-2 pb-4 flex justify-between items-center"
     >
       <div className="flex text-xs uppercase overflow-hidden">
-        <span className="split-text">
+        <span className="hidden sm:block split-text">
           {`${info.name} , 2025 © All Rights Reserved`}
         </span>
+        <span className="sm:hidden split-text">{`©${info.name} , 2025`}</span>
       </div>
 
-      <div className="flex justify-end items-center gap-2 overflow-hidden">
-        {prevPage && (
-          <AnimatedLink href={prevPage}>
-            <span className="split-text">
-              {prevPage === "resume" ? "[ Resume ]" : "[ Back ]"}
-            </span>
-          </AnimatedLink>
-        )}
-
-        {nextPage && (
-          <AnimatedLink href={nextPage}>
-            <span className="split-text">
-              {nextPage === "/" || nextPage === "index"
-                ? "[ Move to Index ]"
-                : "[ Next Page ]"}
-            </span>
-          </AnimatedLink>
-        )}
-      </div>
+      <FooterNav
+        nextPage={nextPage}
+        prevPage={prevPage}
+        className={`text-xs h-4 md:text-base md:h-auto`}
+      />
     </footer>
   );
 }

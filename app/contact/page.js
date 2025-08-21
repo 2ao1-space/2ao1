@@ -1,40 +1,20 @@
-import Footer from "../_components/Footer";
+import Header from "../_components/Header";
 import ContactPart from "./_components/ContactPart";
-import info from "../_data/info.json";
-import AnimatedLink from "../_components/AnimatedLink";
+import Linkscontact from "./_components/Linkscontact";
+import Footer from "../_components/Footer";
 
 export const metadata = {
-  title: "contact me",
+  title: "Drop me a line",
 };
 
 export default function Contact() {
   return (
     <>
-      <section className="container mx-auto overflow-x-hidden">
-        <ContactPart />
+      <Header />
 
-        <div className="flex py-20 flex-col items-end">
-          <div className="flex justify-end flex-col items-start space-y-4">
-            <div className="flex justify-end flex-col items-start">
-              <span className="text-xs">Follow me : </span>
-              <ul className="flex gap-4">
-                {info.social.slice(1, 4).map((item, index) => (
-                  <li key={index}>
-                    <AnimatedLink href={item.path} target="_blank">
-                      {item.name}
-                    </AnimatedLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      <ContactPart />
 
-            <div>
-              <span className="text-xs">Email : </span>
-              <p>{info.email}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Linkscontact />
 
       <Footer nextPage="/" prevPage="projects" />
     </>

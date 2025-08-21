@@ -1,10 +1,13 @@
-import { LuDownload } from "react-icons/lu";
+import ResumeLayout from "./_components/ResumeLayout";
+
 export const metadata = {
-  title: "my Resume | My Portfolio",
+  title: "Ahmed Omran Resume",
 };
 
 export default function Resume() {
-  return <h1>My Resume 
-<LuDownload />
-</h1>;
+  return (
+    <>
+      <ResumeLayout />
+    </>
+  );
 }

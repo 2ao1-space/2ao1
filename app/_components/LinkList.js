@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import AnimatedLink from "./AnimatedLink";
 
 export default function LinkList({

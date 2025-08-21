@@ -104,19 +104,7 @@
   "CVs": [
     {
       "roleTitle": "Frontend Developer",
-      "filePath": "/public/AhmedOmran_FrontendDeveloper_CV.pdf"
-    },
-    {
-      "roleTitle": "Backend Developer",
-      "filePath": "/public/AhmedOmran_BackendDeveloper_CV.pdf"
-    },
-    {
-      "roleTitle": "Frontend Developer",
-      "filePath": "/public/AhmedOmran_FrontendDeveloper_CV.pdf"
-    },
-    {
-      "roleTitle": "Backend Developer",
-      "filePath": "/public/AhmedOmran_BackendDeveloper_CV.pdf"
+      "filePath": "/AhmedOmran_FrontendDeveloper_CV.pdf"
     }
   ],
   "social": [
@@ -295,7 +283,7 @@
     }
   ],
 
-  "experiance": [
+  "experience": [
     {
       "name": "Nancy AI",
       "logo": "/images/sroty1.jpg",
