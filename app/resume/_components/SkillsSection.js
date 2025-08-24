@@ -30,7 +30,7 @@ export default function SkillsSection() {
       <div className="col-span-12 md:col-span-9 grid grid-cols-9 gap-8">
         {/* <!-- skills --> */}
         <div className="col-span-9 md:col-span-6 flex border-b border-primary-900 py-10 md:py-0 ">
-          <span className="w-1/4">[ 03 ]</span>
+          <span className="w-1/4">[ 02 ]</span>
           <div className="w-3/4 flex flex-col justify-between">
             <h3 className="text-sm md:text-2xl font-bold mb-4">Skills</h3>
             <div className="flex gap-8 justify-between text-xs md:text-base md:pb-8">
@@ -61,7 +61,7 @@ export default function SkillsSection() {
         </div>
         {/* <!-- projects --> */}
         <div className="col-span-9 flex gap-4 items-start pb-20">
-          <span className="w-1/4">[ 04 ]</span>
+          <span className="w-1/4">[ 03 ]</span>
           <div className="w-3/4">
             <h3 className="text-sm md:text-2xl font-bold mb-8">Projects</h3>
             {info.projects.map((project, index) => (

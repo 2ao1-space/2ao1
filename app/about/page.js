@@ -24,7 +24,7 @@ export default function About() {
       <StorySection />
 
       {/* <!-- Experiance section --> */}
-      <ExperianceSection />
+      {/* <ExperianceSection /> */}
 
       {/* work lifw balance : knowing about my live in my free time  */}
       <LifeBalance />

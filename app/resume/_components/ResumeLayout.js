@@ -18,7 +18,7 @@ export default function ResumeLayout() {
         <ResumeHeader />
 
         {/* <!-- experiance --> */}
-        <SectionsLayout num={1} title="Experience">
+        {/* <SectionsLayout num={1} title="Experience">
           {info.experience.map((exp, index) => (
             <div
               key={index}
@@ -35,10 +35,10 @@ export default function ResumeLayout() {
               </div>
             </div>
           ))}
-        </SectionsLayout>
+        </SectionsLayout> */}
 
         {/* <!-- education --> */}
-        <SectionsLayout num={2} title="Education">
+        <SectionsLayout num={1} title="Education">
           <div className="flex flex-col md:flex-row justify-between items-start py-2 border-b border-primary-900 text-xs md:text-base">
             <div>
               <p>

@@ -225,15 +225,5 @@
         "Structured content flow (hero → services → menu → contact)"
       ]
     }
-  ],
-  "experience": [
-    {
-      "name": "Nancy AI",
-      "logo": "/images/sroty1.jpg",
-      "url": "https://nancy-ai.com",
-      "role": "Front-End Intern",
-      "period": { "from": "7-2025", "to": "" },
-      "opinion": "The company provides a supportive work environment for interns, allowing me to develop my Front-End skills and work with the latest technologies. The team is collaborative and helps enhance my practical experience through real-world projects and continuous guidance."
-    }
   ]
 }
