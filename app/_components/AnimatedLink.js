@@ -63,7 +63,7 @@ export default function AnimatedLink({
       target={target}
       className={`${className} animated-link flex flex-col justify-center items-center overflow-y-hidden`}
     >
-      <div className="h-6 overflow-hidden relative">
+      <div className="h-5 md:h-6 overflow-hidden relative">
         <span className="initial-link">{children}</span>
         <span className="second-link absolute top-0 left-0">{children}</span>
       </div>
