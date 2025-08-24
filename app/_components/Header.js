@@ -12,23 +12,23 @@ import Social from "./Header/Social";
 export default function Header() {
   const { updateAvailability, status, timeStr } = useAvilability();
 
-  useEffect(() => {
-    updateAvailability();
+  // useEffect(() => {
+  //   updateAvailability();
 
-    // split-text animation for header sections
-    const headerTexts = gsap.utils.toArray(".split-text");
-    gsap.fromTo(
-      headerTexts,
-      { y: "100%", opacity: 0 },
-      {
-        y: "0%",
-        opacity: 1,
-        duration: 0.7,
-        ease: "power3.out",
-        stagger: 0.15,
-      }
-    );
-  }, []);
+  //   // split-text animation for header sections
+  //   const headerTexts = gsap.utils.toArray(".split-text");
+  //   gsap.fromTo(
+  //     headerTexts,
+  //     { y: "100%", opacity: 0 },
+  //     {
+  //       y: "0%",
+  //       opacity: 1,
+  //       duration: 0.7,
+  //       ease: "power3.out",
+  //       stagger: 0.15,
+  //     }
+  //   );
+  // }, []);
 
   return (
     <header className="sticky md:relative top-0 left-0 z-50 bg-tertiary border-b border-primary-900">
