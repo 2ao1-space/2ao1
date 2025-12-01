@@ -2,9 +2,7 @@ import PageNav from "./PageNav";
 
 export default function FooterNav({ className, nextPage, prevPage }) {
   return (
-    <div
-      className={`flex justify-end items-center gap-2 overflow-hidden ${className}`}
-    >
+    <div className={`flex items-start overflow-hidden ${className}`}>
       {prevPage && (
         <PageNav
           link={prevPage}

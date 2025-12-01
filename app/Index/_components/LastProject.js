@@ -1,32 +1,57 @@
-import info from "../../_data/info.json";
+"use client";
+import { gsap } from "gsap";
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
-import SectionTitle from "../../_components/SectionTitle";
-import ProjectImage from "../../_components/ProjectImage";
-import LastPContent from "./LastPContent";
+export default function LastProject({
+  src,
+  alt,
+  href,
+  width,
+  height,
+  className,
+}) {
+  const imgRef = useRef(null);
+  const router = useRouter();
 
-export default function LastProject() {
+  const handleClick = () => {
+    const img = imgRef.current;
+    const rect = img.getBoundingClientRect();
+
+    // Fix the image so we can animate globally
+    gsap.set(img, {
+      position: "fixed",
+      left: rect.left,
+      top: rect.top,
+      width: rect.width,
+      height: rect.height,
+      zIndex: 9999,
+    });
+
+    // Animation to full screen
+    gsap.to(img, {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+      duration: 0.6,
+      ease: "power3.out",
+      onComplete: () => {
+        router.push(href);
+      },
+    });
+  };
+
   return (
-    <section className="md:py-20 py-4">
-      {/* title */}
-      <SectionTitle
-        title={"Latest Project"}
-        href={"/projects"}
-        link={"View All Work"}
-      />
-
-      <div className="md:px-32 py-2 relative">
-        <div className="relative group">
-          {/* last project img */}
-          <ProjectImage
-            src={info.projects[0].img}
-            alt={info.projects[0].title}
-            loading="lazy"
-            className="w-full"
-          />
-
-          <LastPContent project={info.projects[0]} />
-        </div>
-      </div>
-    </section>
+    <Image
+      ref={imgRef}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className + " cursor-pointer object-cover"}
+      onClick={handleClick}
+    />
   );
 }

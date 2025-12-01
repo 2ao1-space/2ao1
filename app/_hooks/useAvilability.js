@@ -9,7 +9,7 @@ export function useAvilability() {
     let until;
 
     if (hour >= 0 && hour < 9) {
-      status = "Sleeping. Will get back soon!";
+      status = "Sleeping. \nWill get back soon!";
       until = new Date(now.setHours(9, 0, 0, 0));
     }
 
@@ -24,7 +24,7 @@ export function useAvilability() {
     }
 
     if (hour >= 23) {
-      status = "Sleeping. Will get back soon!";
+      status = `Sleeping. \nWill get back soon!`;
       const tomorrow = new Date(now);
       tomorrow.setDate(tomorrow.getDate() + 1);
       tomorrow.setHours(9, 0, 0, 0);

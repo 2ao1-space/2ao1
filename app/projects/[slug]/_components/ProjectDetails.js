@@ -15,7 +15,7 @@ export default function ProjectDetails({ project }) {
 
         <ProjectSpan title="Timefram" project={project.date} />
 
-        <ProjectSpan title="Created" project={project.createdBy?.dev} />
+        {/* <ProjectSpan title="Created" project={project.createdBy?.dev} /> */}
 
         <ProjectSpan
           title="Copyright"
@@ -29,14 +29,14 @@ export default function ProjectDetails({ project }) {
           href={project.url}
           className="text-primary-900 hover:text-main"
         >
-          [ View Live ]
-        </AnimatedLink>{" "}
+          [ Demo ]
+        </AnimatedLink>
         |
         <AnimatedLink
           href={project.repo}
           className="text-primary-900 hover:text-main"
         >
-          [ View Code ]
+          [ Code ]
         </AnimatedLink>
       </div>
     </>

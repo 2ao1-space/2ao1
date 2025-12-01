@@ -10,7 +10,7 @@ import MovetoContact from "../../projects/_components/MovetoContact";
 export default function ResumeLayout() {
   return (
     <>
-      <main className="container mx-auto">
+      <main className="container mx-auto px-4">
         {/* <!-- personal information --> */}
         <PIResume info={info} />
 

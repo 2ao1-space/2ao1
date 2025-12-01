@@ -41,3 +41,8 @@
   overflow-y: hidden;
   will-change: transform, opacity;
 }
+
+.text-stroke {
+  -webkit-text-stroke-width: 20px;
+  -webkit-text-stroke-color: black;
+}

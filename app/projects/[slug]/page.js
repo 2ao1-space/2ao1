@@ -58,6 +58,7 @@ export default function ProjectPage({ params }) {
   const prevSlug = prevProject.title.toLowerCase().replace(/\s+/g, "-");
   const nextSlug = nextProject.title.toLowerCase().replace(/\s+/g, "-");
 
+  console.log(projects);
   return (
     <>
       {/* backk btn */}
@@ -76,7 +77,7 @@ export default function ProjectPage({ params }) {
             alt={project.title}
             priority
             loading={"lazy"}
-            className="w-full grayscale hover:grayscale-0 transition-all duration-500"
+            className="w-full grayscale hover:grayscale-0 transition-all duration-500 border border-primary-300"
           />
         </div>
       </div>
@@ -95,50 +96,40 @@ export default function ProjectPage({ params }) {
         </div>
 
         {/* more image about the project */}
-        <div className="space-y-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-4">
           {project.projectImg?.map((img, idx) => (
-            <ProjectImage
-              key={idx}
-              src={img}
-              alt={project.title}
-              loading="lazy"
-              className="w-full grayscale hover:grayscale-0 transition-all duration-500"
-            />
+            <>
+              <div key={idx} className="">
+                <span key={idx} className="text-xs md:text-sm">
+                  [ {idx + 1} ]
+                </span>
+                <ProjectImage
+                  key={idx}
+                  src={img}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full grayscale hover:grayscale-0 transition-all duration-500 bg-slate-600 border border-primary-300"
+                />
+              </div>
+            </>
           ))}
         </div>
       </div>
 
-      <div className="flex justify-between items-center py-4 md:py-20 gap-8 border-t border-primary-900 text-xs md:text-base">
-        <div className="w-1/2 flex justify-between items-end group">
-          <AnimatedLink
-            href={`/projects/${prevSlug}`}
-            className="text-primary-900 group-hover:text-main text-sm md:text-base h-4 md:h-8"
-          >
-            ← {prevProject.title}
-          </AnimatedLink>
-          <ProjectImage
-            src={prevProject.img}
-            alt={prevProject.title}
-            loading={"lazy"}
-            className="w-[300px] h-36 grayscale group-hover:grayscale-0 transition-all duration-500 hidden md:block"
-          />
-        </div>
+      <div className="flex justify-between md:justify-center items-center py-4 md:py-10 gap-8 text-xs md:text-base">
+        <AnimatedLink
+          href={`/projects/${prevSlug}`}
+          className="text-primary-900 group-hover:text-main text-sm md:text-base h-4 md:h-8"
+        >
+          ← {prevProject.title}
+        </AnimatedLink>
 
-        <div className="w-1/2 flex justify-end md:justify-between items-end group">
-          <ProjectImage
-            src={nextProject.img}
-            alt={nextProject.title}
-            loading={"lazy"}
-            className="w-[300px] h-36 grayscale group-hover:grayscale-0 transition-all duration-500 hidden md:block"
-          />
-
-          <AnimatedLink
-            href={`/projects/${nextSlug}`}
-            className="text-primary-900 group-hover:text-main text-sm md:text-base h-4 md:h-8"
-          >
-            {nextProject.title} →
-          </AnimatedLink>
-        </div>
+        <AnimatedLink
+          href={`/projects/${nextSlug}`}
+          className="text-primary-900 group-hover:text-main text-sm md:text-base h-4 md:h-8"
+        >
+          {nextProject.title} →
+        </AnimatedLink>
       </div>
 
       <Footer prevPage="/projects" nextPage="/contact" />
