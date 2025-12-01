@@ -36,7 +36,7 @@
   ],
   "skills": {
     "front": [
-      "JavaScript (ES6+)",
+      "JavaScript",
       "TypeScript",
       "React.js",
       "Next.js",
@@ -46,9 +46,6 @@
     "back": [
       "C#",
       "ASP.NET Core",
-      "ASP.NET Core MVC",
-      "Node.js",
-      "Express.js",
       "Entity Framework Core",
       "SQL Server",
       "PostgreSQL"
@@ -200,7 +197,7 @@
       "client": "Personal Project",
       "img": "/images/ToDo/User_Dashboard.png",
       "projectImg": ["/images/ToDo/New_Todo.png"],
-      "bio": "A simple task management application for productivity. A simple task management application for productivity. A simple task management application for productivity.",
+      "bio": "A simple task management application for productivity. Clean and intuitive interface for managing daily tasks with ease.",
       "url": "https://todo-list.2ao1.space",
       "repo": "https://github.com/2ao1-1/Todo-List",
       "special": "Task Management App",
@@ -231,7 +228,7 @@
         "/images/Bsaraha/Landing_page.png",
         "/images/Bsaraha/profile.png"
       ],
-      "bio": "An anonymous messaging platform for honest feedback. An anonymous messaging platform for honest feedback. An anonymous messaging platform for honest feedback.",
+      "bio": "An anonymous messaging platform for honest feedback. A safe and engaging way to receive messages without revealing sender identity.",
       "url": "https://bsaraha.2ao1.space",
       "repo": "https://github.com/2ao1-1/bsaraha",
       "special": "Anonymous Messaging Platform",
@@ -266,7 +263,7 @@
         "/images/crusto/orderinfo_page.png",
         "/images/crusto/waiting_page.png"
       ],
-      "bio": "A modern pizza restaurant website with enhanced mobile experience. A modern pizza restaurant website with enhanced mobile experience. A modern pizza restaurant website with enhanced mobile experience.",
+      "bio": "A modern pizza restaurant website with enhanced mobile experience. Clean design and expressive visual hierarchy for easy navigation.",
       "url": "https://crusto.2ao1.space/",
       "repo": "https://github.com/2ao1-1/Crusto-v2",
       "special": "Restaurant Website",
@@ -295,7 +292,7 @@
         "/images/MoveOn/login_form.png",
         "/images/MoveOn/User_Dashboard.png"
       ],
-      "bio": "A visually striking fitness website promoting healthy lifestyle. A visually striking fitness website promoting healthy lifestyle. A visually striking fitness website promoting healthy lifestyle.",
+      "bio": "A visually striking fitness website promoting healthy lifestyle. Bold typography and vibrant colors reflect energy and action.",
       "url": "https://moveon.2ao1.space/",
       "repo": "https://github.com/2ao1-1/MoveOn",
       "special": "Fitness Tracker",
@@ -327,7 +324,7 @@
         "/images/banki/sign_up.jpg",
         "/images/banki/userProfile.png"
       ],
-      "bio": "A clean and professional landing page for financial platform. A clean and professional landing page for financial platform. A clean and professional landing page for financial platform.",
+      "bio": "A clean and professional landing page for financial platform. Calm color palette and minimalist layout convey security and trust.",
       "url": "https://banki.2ao1.space/",
       "repo": "https://github.com/2ao1-1/Banki",
       "special": "Financial Website",
