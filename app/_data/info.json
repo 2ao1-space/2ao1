@@ -161,14 +161,14 @@
       "title": "Gallery",
       "date": "11 / 2025",
       "client": "Personal Project",
-      "img": "/images/gallery/Loading.jpeg",
+      "img": "/images/Gallery/Loading.jpeg",
       "projectImg": [
-        "/images/gallery/Hero.jpeg",
-        "/images/gallery/subhead.jpeg",
-        "/images/gallery/Who_we_serve_1.jpeg",
-        "/images/gallery/Who_we_serve_2.jpeg",
-        "/images/gallery/Who_we_serve_3.jpeg",
-        "/images/gallery/footer.jpeg"
+        "/images/Gallery/Hero.jpeg",
+        "/images/Gallery/subhead.jpeg",
+        "/images/Gallery/Who_we_serve_1.jpeg",
+        "/images/Gallery/Who_we_serve_2.jpeg",
+        "/images/Gallery/Who_we_serve_3.jpeg",
+        "/images/Gallery/footer.jpeg"
       ],
       "bio": "A digital home where creativity flows freely and every brushstroke finds its admirer. Platform connecting artists with art lovers. Discover the art that moves passionate hearts.",
       "url": "https://gallery.2ao1.space",
