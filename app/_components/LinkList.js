@@ -9,7 +9,7 @@ export default function LinkList({
   className = "",
 }) {
   return (
-    <ul className={`flex flex-wrap ${width} ${className}`}>
+    <ul className={`flex  flex-wrap ${width} ${className}`}>
       {items.map((item, index) => (
         <li key={index} className="mr-2">
           <div className="flex h-5 md:h-4 mb-1 justify-start">

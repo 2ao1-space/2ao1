@@ -36,7 +36,7 @@ export default function Header({ heroSection }) {
         <header className="col-span-12 row-span-1 sticky md:relative top-0 left-0 z-50 bg-tertiary ">
           {/* // <header className="col-span-12 row-span-1 sticky md:relative top-0 left-0 z-50 bg-tertiary"> */}
           {/* <div className="container m-auto flex justify-between items-center font-subhead text-base md:text-sm py-2 "> */}
-          <div className="container m-auto flex justify-between items-start font-subhead text-base md:text-sm py-2 ">
+          <div className="container m-auto flex justify-between items-start font-subhead text-xs md:text-sm py-2 ">
             {/* name & role */}
             <NameAndRole />
             {/* status */}

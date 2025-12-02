@@ -13,7 +13,7 @@ export const ProjectTypeSelector = ({ onTypeChange }) => {
   ];
   const [selected, setSelected] = useState("new-project");
   return (
-    <div className="flex justify-start items-center gap-4 py-10">
+    <div className="flex justify-start items-center gap-4 pt-10 pb-4">
       {projectTypes.map((type) => (
         <div
           key={type.id}
@@ -24,7 +24,9 @@ export const ProjectTypeSelector = ({ onTypeChange }) => {
           className={`cursor-pointer transition-all group `}
         >
           <h4
-            className={`font-mainHead ${selected === type.id ? "text-main" : "text-primary-900"}`}
+            className={`font-mainHead ${
+              selected === type.id ? "text-main" : "text-primary-900"
+            }`}
           >
             [ {type.title} ]
           </h4>

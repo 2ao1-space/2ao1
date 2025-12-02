@@ -83,15 +83,15 @@ export default function Menu({ status, timeStr }) {
               <LuX />
             </button>
 
-            <div className="grid items-center justify-center gap-2 md:flex-grow">
+            <div className="grid items-center justify-start gap-6 md:flex-grow">
               {/* name & role */}
               <NameAndRole />
               {/* status */}
               <Status status={status} timeStr={timeStr} />
               {/* sitemap */}
-              <Sitemap />
+              <Sitemap linkStyle="flex-col" />
               {/* social */}
-              <Social />
+              <Social linkStyle="flex-col" />
             </div>
           </div>
 

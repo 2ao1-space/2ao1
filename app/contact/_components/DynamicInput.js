@@ -34,8 +34,8 @@ export const DynamicInput = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="inline-block bg-transparent text-main text-base md:text-3xl font-medium border-b border-main placeholder:text-main dark:border-white/30 focus:outline-none focus:border-primary-500 px-1 transition-all"
-        style={{ minWidth: "50px", width: value ? "auto" : "120px" }}
+        className="inline-block bg-transparent text-main text-sm md:text-3xl font-medium border-b border-main placeholder:text-main dark:border-white/30 focus:outline-none focus:border-primary-500 transition-all"
+        style={{ minWidth: "20px", width: value ? "auto" : "100px" }}
         disabled={isLoading}
         autoComplete={
           name === "email" ? "email" : name === "name" ? "name" : "off"

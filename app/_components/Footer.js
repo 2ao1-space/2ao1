@@ -4,7 +4,12 @@ import { gsap } from "gsap";
 
 import info from "../_data/info.json";
 import FooterNav from "./Footer/FooterNav";
-export default function Footer({ prevPage = "", nextPage = "", hero }) {
+export default function Footer({
+  prevPage = "",
+  nextPage = "",
+  hero,
+  className,
+}) {
   const footerRef = useRef(null);
 
   // useEffect(() => {
@@ -40,7 +45,7 @@ export default function Footer({ prevPage = "", nextPage = "", hero }) {
   return (
     <footer
       ref={footerRef}
-      className="container mx-auto font-subhead border-t border-primary-400 md:py-4 flex md:flex-row justify-between items-center"
+      className={`${className} container mx-auto font-subhead border-t border-primary-400 md:py-4 flex md:flex-row justify-between items-center`}
     >
       <div className="w-1/2 flex text-sm uppercase overflow-hidden py-4 md:py-0">
         <span className="hidden sm:block split-text">
@@ -53,7 +58,7 @@ export default function Footer({ prevPage = "", nextPage = "", hero }) {
         nextPage={nextPage}
         prevPage={prevPage}
         className={`h-6 md:h-4 text-sm md:text-base flex justify-end md:justify-end items-center w-full ${
-          hero ? "mt-4 md:mt-0" : ""
+          hero ? "mt-2 md:mt-0" : ""
         }`}
       />
     </footer>

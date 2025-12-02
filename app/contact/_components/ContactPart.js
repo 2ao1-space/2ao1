@@ -12,8 +12,7 @@ import { EmailLoadingState } from "./LoadingStates";
 
 import Btn from "../../_components/Btn";
 
-export default function ContactPart() {
-  // State management
+export default function ContactPart({ className }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +24,6 @@ export default function ContactPart() {
   const [projectType, setProjectType] = useState("new-project");
   const { email, isLoading, setIsLoading, isMounted } = useEmailJS();
 
-  // Form handlers
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -53,7 +51,6 @@ export default function ContactPart() {
     }));
   };
 
-  // Email sending logic
   const sendEmail = async () => {
     if (!validateForm(formData, projectType)) return;
     if (!email) {
@@ -75,7 +72,6 @@ export default function ContactPart() {
     }
   };
 
-  // Render dynamic input helper
   const renderDynamicInput = (name, placeholder) => (
     <DynamicInput
       name={name}
@@ -87,11 +83,10 @@ export default function ContactPart() {
     />
   );
 
-  // Get current template based on project type
   const currentTemplate = ContactTemplates[projectType];
 
   return (
-    <div className="font-mainHead">
+    <div className={`${className} `}>
       {/* Project type selector */}
       <ProjectTypeSelector onTypeChange={handleProjectTypeChange} />
 
@@ -99,11 +94,11 @@ export default function ContactPart() {
       {currentTemplate(renderDynamicInput)}
 
       {/* Action buttons */}
-      <div className="mt-10 flex flex-col sm:flex-row gap-4">
+      <div className="flex sm:flex-row gap-4 pt-10 md:pt-8 sm:justify-start justify-end">
         <Btn
           onClick={sendEmail}
           disabled={isLoading || !email}
-          className="text-sm md:text-base h-10 md:h-12 bg-primary-800 hover:bg-main text-tertiary py-2 px-4 rounded-full transition-all duration-500"
+          className="text-sm md:text-base h-6 md:h-10 bg-primary-800 hover:bg-main text-tertiary md:py-2 px-4 md:px-8 rounded-full transition-all duration-500 flex justify-center items-center"
         >
           {isLoading ? "Sending..." : "[ Send Message ]"}
         </Btn>
