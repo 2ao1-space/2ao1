@@ -25,8 +25,7 @@ export default function useAboutAnimation() {
         duration: 3,
         stagger: 0.02,
         ease: "power4.out",
-      },
-      "+=1"
+      }
     );
 
     if (subTitle && subTitleRef.current) {
