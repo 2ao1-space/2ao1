@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "name": "Ahmed Omran",
+    "title": "Frontend Developer",
+    "image": "/Hero.jpg",
+    "email": {
+      "name": "omran.a.jr@gmail.com",
+      "url": "https://mail.google.com/mail/?view=cm&fs=1&to=omran.a.jr@gmail.com"
+    },
+    "phone": { "name": "+20 1030960225", "url": "https://wa.me/201030960225" },
+    "location": {
+      "city": "Cairo",
+      "country": "Egypt"
+    },
+    "social": [
+      { "name": "github", "url": "https://github.com/2ao1-1" },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/ahmed-omran-2ao1/"
+      }
+    ],
+    "siteMap": [
+      {
+        "path": "/Ahmed_Omran_Junior_Frontend_Developer.pdf",
+        "name": "Resume"
+      },
+      { "path": "about", "name": "About" },
+      { "path": "projects", "name": "Projects" },
+      { "path": "contact", "name": "Contact" }
+    ]
+  },
+
+  "hero": {
+    "headline": "Frontend Developer focused on building modern, interactive web experiences.",
+    "subheadline": "I build clean, scalable, and visually engaging interfaces using React and modern frontend tools.",
+    "cta": [
+      { "label": "View Projects", "action": "scroll-projects" },
+      { "label": "Download Resume", "action": "/resume" }
+    ]
+  },
+
+  "about": {
+    "shortBio": "I build frontend experiences where design, motion, and clean React code meet.",
+    "description": [
+      "I didn’t come to frontend development just to write code — I came for the intersection between design and logic.",
+      "I enjoy turning visual ideas into interactive, well-structured React interfaces that feel smooth, clear, and intentional.",
+      "For me, a good frontend isn’t only about features, it’s about how users feel while using the product."
+    ]
+  },
+  "howIWork": [
+    "Break designs down into clear, reusable React components.",
+    "Care deeply about UI clarity, motion, and interaction details.",
+    "Write code that’s easy to read, reason about, and extend.",
+    "Even personal projects are treated like real products."
+  ],
+  "values": [
+    "Clean UI over visual noise",
+    "Small details matter",
+    "Readable code beats clever code",
+    "Learning through building, not just watching"
+  ],
+  "skills": {
+    "frontend": [
+      "React",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Next.js",
+      "Tailwind CSS",
+      "GSAP"
+    ],
+    "tools": ["Git", "GitHub", "Vite", "Figma"]
+  },
+
+  "projects": [
+    {
+      "title": "Todo List",
+      "tagline": "A minimal task management app focused on clean UI and productivity.",
+      "focus": "Core React fundamentals, clean JavaScript logic, and predictable UI behavior.",
+      "intent": {
+        "short": "Demonstrates structured UI thinking and state handling.",
+        "details": "Built as part of a hiring process for a content-driven platform to demonstrate core React fundamentals, clean JavaScript logic, and the ability to organize frontend code clearly."
+      },
+      "thumbnail": "/images/ToDo/User_Dashboard.png",
+      "screens": [
+        "/images/ToDo/Login_Form.png",
+        "/images/ToDo/New_Todo.png",
+        "/images/ToDo/User_Dashboard.png"
+      ],
+      "responsibilities": [
+        "Implemented task CRUD functionality.",
+        "Managed server-state using React Query.",
+        "Focused on clean UI structure and usability."
+      ],
+      "techStack": ["React", "TypeScript", "React Query", "Tailwind CSS"],
+      "links": {
+        "live": "https://todo-list.2ao1.space",
+        "repo": "https://github.com/2ao1-1/Todo-List"
+      }
+    },
+    {
+      "title": "Crusto",
+      "tagline": "Modern restaurant ordering experience.",
+      "focus": "Mobile-first UX, cart state management, and clear ordering flow.",
+      "intent": {
+        "short": "Explores user flow and ordering logic in service-based platforms.",
+        "details": "Built to better understand service-based websites, especially restaurant platforms, focusing on user flow, ordering experience, and clear presentation of business information."
+      },
+      "thumbnail": "/images/crusto/hero.png",
+      "screens": [
+        "/images/crusto/landing_page.png",
+        "/images/crusto/login_page.png",
+        "/images/crusto/feed_page.png",
+        "/images/crusto/order_page.png"
+      ],
+      "responsibilities": [
+        "Built responsive UI pages for menu browsing and ordering flow.",
+        "Implemented cart state management.",
+        "Designed layouts with clear visual hierarchy."
+      ],
+      "techStack": ["React", "JavaScript", "Tailwind CSS", "Redux", "Vite"],
+      "links": {
+        "live": "https://crusto.2ao1.space",
+        "repo": "https://github.com/2ao1-1/Crusto-v2"
+      }
+    },
+    {
+      "title": "Gallery",
+      "tagline": "A digital home for artists and art lovers.",
+      "focus": "Scalable UI architecture, content-heavy layouts, and scroll-based animations.",
+      "intent": {
+        "short": "Connects artists, studios, and art lovers in one digital space.",
+        "details": "Created to provide a unified platform where artists can showcase and sell their work, explore job opportunities, and connect with studios, while allowing art lovers and collectors to discover visual inspiration and creative talent in one place."
+      },
+      "thumbnail": "/images/Gallery/Hero.jpeg",
+      "screens": [
+        "/images/Gallery/subhead.jpeg",
+        "/images/Gallery/Who_we_serve_1.jpeg",
+        "/images/Gallery/Who_we_serve_2.jpeg",
+        "/images/Gallery/Who_we_serve_3.jpeg",
+        "/images/Gallery/footer.jpeg"
+      ],
+
+      "responsibilities": [
+        "Built reusable React components with a scalable structure.",
+        "Implemented responsive layouts and smooth UI interactions.",
+        "Handled API integration, loading, and error states.",
+        "Optimized performance for content-heavy pages."
+      ],
+      "techStack": ["React", "TypeScript", "Tailwind CSS", "Vite", "GSAP"],
+      "links": {
+        "live": "https://gallery.2ao1.space",
+        "repo": "https://github.com/2ao1-space/Gallery"
+      }
+    }
+  ],
+  "otherProjectsNote": "Additional UI and practice projects are available on",
+
+  "footer": {
+    "cta": "Interested in working together?",
+    "email": "omran.a.jr@gmail.com"
+  }
+}

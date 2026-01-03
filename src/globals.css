@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Anton";
+  src: url("/fonts/Anton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ArefB";
+  src: url("/fonts/ArefRuqaaInk-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("/fonts/AeonikTRIAL-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Influencer";
+  src: url("/fonts/Influencer-BF691345d5b8ad8.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Become";
+  src: url("/fonts/Become-BF691bc7e40660b.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Peace";
+  src: url("/fonts/Peace-BF6913e87e5ff5d.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-main: #be1e2d;
+  --color-tertiary: #f8f8f8;
+  /* --color-darkness: #3f3f3f; */
+  --color-darkness: #212529;
+  --color-accent: #e8d4a2;
+  /* --color-accent: #e7d283; */
+
+  --font-MainFont: "Influencer";
+  --font-Content: "ArefB";
+  --font-SecFont: "Aeonik";
+  --font-Become: "Become";
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee__inner {
+  display: inline-flex;
+  will-change: transform;
+}
+
+.aboutword {
+  opacity: 0;
+  transform: translateY(100px);
+  visibility: hidden;
+}

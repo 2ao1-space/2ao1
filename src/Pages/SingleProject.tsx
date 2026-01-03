@@ -1,0 +1,357 @@
+import { useRef, useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+import AnimatedBtn from "../Components/AnimatedBtn";
+import type { ProjectType } from "../Types/ProjectType";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+export default function SingleProject({
+  closeModal,
+  selectedProject,
+}: {
+  closeModal: () => void;
+  selectedProject: ProjectType;
+}) {
+  const modalRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const aboutRef = useRef<HTMLParagraphElement>(null);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        setFontsLoaded(true);
+      });
+    } else {
+      setTimeout(() => setFontsLoaded(true), 100);
+    }
+  }, []);
+
+  useGSAP(() => {
+    if (!fontsLoaded || !modalRef.current) return;
+
+    const projectElements = document.querySelectorAll(".projectContent");
+
+    projectElements.forEach((el) => {
+      const split = new SplitText(el, {
+        type: "lines",
+        linesClass: "projectword",
+        mask: "lines",
+      });
+
+      gsap.fromTo(
+        split.lines,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.5,
+          ease: "power2.out",
+          // scrollTrigger: {
+          //   trigger: ".projectContent",
+          //   start: "top top",
+          //   end: "bottom 80%",
+          //   scrub: true,
+          // },
+        }
+      );
+      // const ctx = gsap.context(() => {
+      //   gsap.fromTo(
+      //     modalRef.current,
+      //     {
+      //       y: "100%",
+      //       opacity: 0,
+      //     },
+      //     {
+      //       y: 0,
+      //       opacity: 1,
+      //       duration: 0.6,
+      //       ease: "power3.out",
+      //     }
+      //   );
+
+      //   if (titleRef.current) {
+      //     const titleSplit = new SplitText(titleRef.current, {
+      //       type: "chars,words",
+      //       charsClass: "char",
+      //     });
+
+      //     gsap.from(titleSplit.chars, {
+      //       duration: 0.8,
+      //       opacity: 0,
+      //       y: 100,
+      //       rotationX: -90,
+      //       transformOrigin: "0% 50% -50",
+      //       ease: "back.out(1.7)",
+      //       stagger: 0.02,
+      //       delay: 0.3,
+      //     });
+      //   }
+
+      //   // 3️⃣ About Text Split Animation
+      //   if (aboutRef.current) {
+      //     const aboutSplit = new SplitText(aboutRef.current, {
+      //       type: "lines",
+      //       linesClass: "line-split",
+      //     });
+
+      //     gsap.from(aboutSplit.lines, {
+      //       duration: 0.6,
+      //       opacity: 0,
+      //       y: 60,
+      //       stagger: 0.1,
+      //       ease: "power3.out",
+      //       delay: 0.5,
+      //     });
+      //   }
+
+      //   // 4️⃣ Left Side Items من تحت لفوق
+      //   gsap.from(".left-animate", {
+      //     duration: 0.8,
+      //     opacity: 0,
+      //     y: 50,
+      //     stagger: 0.15,
+      //     ease: "power3.out",
+      //     delay: 0.6,
+      //   });
+
+      //   // 5️⃣ Buttons من تحت لفوق
+      //   gsap.from(".btn-animate", {
+      //     duration: 0.8,
+      //     opacity: 0,
+      //     y: 40,
+      //     scale: 0.9,
+      //     stagger: 0.1,
+      //     ease: "back.out(1.7)",
+      //     delay: 0.9,
+      //   });
+
+      //   if (scrollContainerRef.current) {
+      //     const screenshots =
+      //       scrollContainerRef.current.querySelectorAll(".screenshot");
+
+      //     screenshots.forEach((screen, index) => {
+      //       const randomY = gsap.utils.random(-100, 100);
+      //       // const randomRotation = gsap.utils.random(-5, 5);
+      //       // const randomScale = gsap.utils.random(0.85, 0.95);
+
+      //       // Entrance Animation
+      //       gsap.from(screen, {
+      //         scrollTrigger: {
+      //           trigger: screen,
+      //           scroller: scrollContainerRef.current,
+      //           start: "top 90%",
+      //           end: "bottom 20%",
+      //           toggleActions: "play none none reverse",
+      //         },
+      //         duration: 1.2,
+      //         opacity: 0,
+      //         y: randomY,
+      //         // scale: randomScale,
+      //         // rotation: randomRotation,
+      //         ease: "power3.out",
+      //       });
+
+      //       gsap.to(screen, {
+      //         scrollTrigger: {
+      //           trigger: screen,
+      //           scroller: scrollContainerRef.current,
+      //           start: "top bottom",
+      //           end: "bottom top",
+      //           scrub: 1.5,
+      //         },
+      //         y: index % 2 === 0 ? -80 : -40,
+      //         ease: "none",
+      //       });
+      //     });
+
+      //     // Responsibilities Animation
+      //     const responsibilitiesSection =
+      //       scrollContainerRef.current.querySelector(".responsibilities");
+      //     if (responsibilitiesSection) {
+      //       const responsibilityItems =
+      //         responsibilitiesSection.querySelectorAll("p");
+      //       gsap.from(responsibilityItems, {
+      //         scrollTrigger: {
+      //           trigger: responsibilitiesSection,
+      //           scroller: scrollContainerRef.current,
+      //           start: "top 80%",
+      //           toggleActions: "play none none reverse",
+      //         },
+      //         duration: 0.6,
+      //         opacity: 0,
+      //         x: -30,
+      //         stagger: 0.1,
+      //         ease: "power2.out",
+      //       });
+      //     }
+      //   }
+    });
+
+    // return () => ctx.revert();
+  }, [fontsLoaded]);
+
+  const leftImages =
+    selectedProject.screens?.filter((_, idx) => idx % 2 === 0) || [];
+  const rightImages =
+    selectedProject.screens?.filter((_, idx) => idx % 2 !== 0) || [];
+
+  return (
+    <div
+      className="absolute top-0 py-10 h-screen w-full inset-0 z-99999 flex items-center justify-center bg-black/80"
+      onClick={closeModal}
+    >
+      <div
+        ref={modalRef}
+        className="relative bg-tertiary w-full h-screen overflow-hidden p-4"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          onClick={closeModal}
+          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/70 text-white rounded-full transition"
+        >
+          ✕
+        </button>
+
+        <div ref={scrollContainerRef} className="h-full overflow-y-auto">
+          <div
+            className="mb-10 left-animate relative overflow-hidden rounded-lg"
+            style={{
+              backgroundImage: `url(${selectedProject.thumbnail})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              minHeight: "400px",
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-darkness/40 to-darkness/90" />
+
+            <div className="relative bottom-0 w-full h-100 p-8 flex justify-between items-end">
+              <h2
+                ref={titleRef}
+                className="projectContent text-[120px] md:text-[180px] font-bold text-white font-SecFont leading-none drop-shadow-2xl"
+              >
+                {selectedProject.title}
+              </h2>
+              <p className="projectContent text-white/90 text-lg">
+                {selectedProject.tagline}
+              </p>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="flex justify-between items-start">
+            <div className="mb-8 left-animate w-1/2">
+              <span className="projectContent capitalize text-sm text-gray-500 block mb-2">
+                About the Project
+              </span>
+              <p
+                ref={aboutRef}
+                className="projectContent text-darkness leading-relaxed w-2/3"
+              >
+                {selectedProject.intent.details}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 justify-start w-1/2">
+              <div className="flex gap-4 justify-start btn-animate">
+                {selectedProject.links.live && (
+                  <AnimatedBtn
+                    href={selectedProject.links.live}
+                    target="_blank"
+                    className="projectContent border border-main px-4 h-7 rounded-sm bg-main text-tertiary"
+                  >
+                    Live
+                  </AnimatedBtn>
+                )}
+
+                {selectedProject.links.repo && (
+                  <AnimatedBtn
+                    href={selectedProject.links.repo}
+                    target="_blank"
+                    className="projectContent border border-darkness px-4 h-7 rounded-sm text-darkness bg-tertiary"
+                  >
+                    Code
+                  </AnimatedBtn>
+                )}
+              </div>
+              <div className="mt-8 mb-8 left-animate">
+                <span className="projectContent capitalize text-sm text-gray-500 block mb-2">
+                  Technologies
+                </span>
+                <ul className="flex flex-wrap gap-2">
+                  {selectedProject.techStack?.map((tech, i) => (
+                    <li
+                      key={i}
+                      className="projectContent px-3 py-1 bg-gray-200 text-darkness rounded-full text-sm"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-between items-start mt-6">
+            <div className="left-animate w-1/2">
+              <span className="projectContent capitalize text-sm text-gray-500 block mb-2">
+                Focus on
+              </span>
+              <p className="projectContent text-gray-600 leading-relaxed">
+                {selectedProject.focus}
+              </p>
+            </div>
+
+            {selectedProject.responsibilities && (
+              <div className="responsibilities w-1/2">
+                <span className="capitalize text-sm text-gray-500 block mb-2">
+                  Responsibilities
+                </span>
+                <div className="space-y-2">
+                  {selectedProject.responsibilities.map((res, i) => (
+                    <p key={i} className="text-gray-600 leading-relaxed flex">
+                      <span className="mr-3 text-darkness font-bold">•</span>
+                      {res}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {selectedProject.screens && selectedProject.screens.length > 0 && (
+            <div className="py-20 flex gap-8 overflow-x-hidden">
+              <div className="w-1/2 space-y-12">
+                {leftImages.map((screen, idx) => (
+                  <img
+                    key={`left-${idx}`}
+                    src={screen}
+                    alt={`${selectedProject.title} screen ${idx * 2 + 1}`}
+                    className="screenshot w-full rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+                  />
+                ))}
+              </div>
+
+              {/* Right Column */}
+              <div className="w-1/2 space-y-12 mt-20">
+                {rightImages.map((screen, idx) => (
+                  <img
+                    key={`right-${idx}`}
+                    src={screen}
+                    alt={`${selectedProject.title} screen ${idx * 2 + 2}`}
+                    className="screenshot w-full rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-300"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
