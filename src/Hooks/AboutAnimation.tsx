@@ -7,11 +7,11 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function useAboutAnimation() {
   const aboutRef = useRef<HTMLDivElement>(null);
-  const subTitleRef = useRef<HTMLParagraphElement>(null);
+  // const subTitleRef = useRef<HTMLParagraphElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     mm.add(
       {
@@ -20,7 +20,9 @@ export default function useAboutAnimation() {
         isDesktop: "(min-width: 768px)",
       },
       (context) => {
-        let { isMobile, isDesktop, isTablet } = context.conditions;
+        if (!context.conditions) return;
+
+        const { isMobile, isTablet } = context.conditions;
 
         gsap.fromTo(
           imageRef.current,

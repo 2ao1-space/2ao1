@@ -39,7 +39,7 @@ export default function useIntroAnimation() {
       display: "none",
     });
 
-    let mm = gsap.matchMedia();
+    const mm = gsap.matchMedia();
 
     mm.add(
       {
@@ -47,7 +47,9 @@ export default function useIntroAnimation() {
         isDesktop: "(min-width: 768px)",
       },
       (context) => {
-        let { isMobile, isDesktop } = context.conditions;
+        if (!context.conditions) return;
+
+        const { isMobile } = context.conditions;
 
         const IntroTl = gsap.timeline({
           defaults: { ease: "power3.out" },

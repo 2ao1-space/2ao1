@@ -26,6 +26,8 @@ export default function SubTitle() {
           "(min-width: 768px) and (min-height: 801px) and (max-height: 1000px)",
       },
       (context) => {
+        if (!context.conditions) return;
+
         const {
           isMobile,
           isVeryShortDesktop,
