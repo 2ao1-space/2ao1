@@ -52,148 +52,9 @@ export default function SingleProject({
           duration: 1,
           stagger: 0.5,
           ease: "power2.out",
-          // scrollTrigger: {
-          //   trigger: ".projectContent",
-          //   start: "top top",
-          //   end: "bottom 80%",
-          //   scrub: true,
-          // },
         }
       );
-      // const ctx = gsap.context(() => {
-      //   gsap.fromTo(
-      //     modalRef.current,
-      //     {
-      //       y: "100%",
-      //       opacity: 0,
-      //     },
-      //     {
-      //       y: 0,
-      //       opacity: 1,
-      //       duration: 0.6,
-      //       ease: "power3.out",
-      //     }
-      //   );
-
-      //   if (titleRef.current) {
-      //     const titleSplit = new SplitText(titleRef.current, {
-      //       type: "chars,words",
-      //       charsClass: "char",
-      //     });
-
-      //     gsap.from(titleSplit.chars, {
-      //       duration: 0.8,
-      //       opacity: 0,
-      //       y: 100,
-      //       rotationX: -90,
-      //       transformOrigin: "0% 50% -50",
-      //       ease: "back.out(1.7)",
-      //       stagger: 0.02,
-      //       delay: 0.3,
-      //     });
-      //   }
-
-      //   // 3️⃣ About Text Split Animation
-      //   if (aboutRef.current) {
-      //     const aboutSplit = new SplitText(aboutRef.current, {
-      //       type: "lines",
-      //       linesClass: "line-split",
-      //     });
-
-      //     gsap.from(aboutSplit.lines, {
-      //       duration: 0.6,
-      //       opacity: 0,
-      //       y: 60,
-      //       stagger: 0.1,
-      //       ease: "power3.out",
-      //       delay: 0.5,
-      //     });
-      //   }
-
-      //   // 4️⃣ Left Side Items من تحت لفوق
-      //   gsap.from(".left-animate", {
-      //     duration: 0.8,
-      //     opacity: 0,
-      //     y: 50,
-      //     stagger: 0.15,
-      //     ease: "power3.out",
-      //     delay: 0.6,
-      //   });
-
-      //   // 5️⃣ Buttons من تحت لفوق
-      //   gsap.from(".btn-animate", {
-      //     duration: 0.8,
-      //     opacity: 0,
-      //     y: 40,
-      //     scale: 0.9,
-      //     stagger: 0.1,
-      //     ease: "back.out(1.7)",
-      //     delay: 0.9,
-      //   });
-
-      //   if (scrollContainerRef.current) {
-      //     const screenshots =
-      //       scrollContainerRef.current.querySelectorAll(".screenshot");
-
-      //     screenshots.forEach((screen, index) => {
-      //       const randomY = gsap.utils.random(-100, 100);
-      //       // const randomRotation = gsap.utils.random(-5, 5);
-      //       // const randomScale = gsap.utils.random(0.85, 0.95);
-
-      //       // Entrance Animation
-      //       gsap.from(screen, {
-      //         scrollTrigger: {
-      //           trigger: screen,
-      //           scroller: scrollContainerRef.current,
-      //           start: "top 90%",
-      //           end: "bottom 20%",
-      //           toggleActions: "play none none reverse",
-      //         },
-      //         duration: 1.2,
-      //         opacity: 0,
-      //         y: randomY,
-      //         // scale: randomScale,
-      //         // rotation: randomRotation,
-      //         ease: "power3.out",
-      //       });
-
-      //       gsap.to(screen, {
-      //         scrollTrigger: {
-      //           trigger: screen,
-      //           scroller: scrollContainerRef.current,
-      //           start: "top bottom",
-      //           end: "bottom top",
-      //           scrub: 1.5,
-      //         },
-      //         y: index % 2 === 0 ? -80 : -40,
-      //         ease: "none",
-      //       });
-      //     });
-
-      //     // Responsibilities Animation
-      //     const responsibilitiesSection =
-      //       scrollContainerRef.current.querySelector(".responsibilities");
-      //     if (responsibilitiesSection) {
-      //       const responsibilityItems =
-      //         responsibilitiesSection.querySelectorAll("p");
-      //       gsap.from(responsibilityItems, {
-      //         scrollTrigger: {
-      //           trigger: responsibilitiesSection,
-      //           scroller: scrollContainerRef.current,
-      //           start: "top 80%",
-      //           toggleActions: "play none none reverse",
-      //         },
-      //         duration: 0.6,
-      //         opacity: 0,
-      //         x: -30,
-      //         stagger: 0.1,
-      //         ease: "power2.out",
-      //       });
-      //     }
-      //   }
     });
-
-    // return () => ctx.revert();
   }, [fontsLoaded]);
 
   const leftImages =
@@ -213,7 +74,7 @@ export default function SingleProject({
       >
         <button
           onClick={closeModal}
-          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/70 text-white rounded-full transition"
+          className="absolute top-6 md:top-4 right-6 md:right-4 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/70 text-white rounded-full transition"
         >
           ✕
         </button>
@@ -225,15 +86,15 @@ export default function SingleProject({
               backgroundImage: `url(${selectedProject.thumbnail})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
-              minHeight: "400px",
+              minHeight: innerWidth < 700 ? "200px" : "400px",
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-b from-darkness/40 to-darkness/90" />
 
-            <div className="relative bottom-0 w-full h-100 p-8 flex justify-between items-end">
+            <div className="relative bottom-0 w-full h-100 p-8 flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end">
               <h2
                 ref={titleRef}
-                className="projectContent text-[120px] md:text-[180px] font-bold text-white font-SecFont leading-none drop-shadow-2xl"
+                className="projectContent text-3xl sm:text-7xl lg:text-[180px] font-bold text-white font-SecFont leading-none drop-shadow-2xl"
               >
                 {selectedProject.title}
               </h2>
@@ -243,21 +104,20 @@ export default function SingleProject({
             </div>
           </div>
 
-          {/* Content Section */}
-          <div className="flex justify-between items-start">
-            <div className="mb-8 left-animate w-1/2">
+          <div className="flex flex-col sm:flex-row justify-between items-start">
+            <div className="mb-8 left-animate w-full sm:w-2/3 lg:w-1/2">
               <span className="projectContent capitalize text-sm text-gray-500 block mb-2">
                 About the Project
               </span>
               <p
                 ref={aboutRef}
-                className="projectContent text-darkness leading-relaxed w-2/3"
+                className="projectContent text-darkness leading-relaxed sm:w-3/4 lg:w-2/3"
               >
                 {selectedProject.intent.details}
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 justify-start w-1/2">
+            <div className="flex flex-col gap-4 justify-start w-full sm:w-1/3 lg:w-1/2">
               <div className="flex gap-4 justify-start btn-animate">
                 {selectedProject.links.live && (
                   <AnimatedBtn
@@ -279,7 +139,7 @@ export default function SingleProject({
                   </AnimatedBtn>
                 )}
               </div>
-              <div className="mt-8 mb-8 left-animate">
+              <div className="mt-4 md:mt-8 mb-8 left-animate">
                 <span className="projectContent capitalize text-sm text-gray-500 block mb-2">
                   Technologies
                 </span>
@@ -297,8 +157,8 @@ export default function SingleProject({
             </div>
           </div>
 
-          <div className="flex justify-between items-start mt-6">
-            <div className="left-animate w-1/2">
+          <div className="flex flex-col sm:flex-row gap-8 md:gap-4 justify-between items-start md:mt-6">
+            <div className="left-animate w-full sm:w-1/2">
               <span className="projectContent capitalize text-sm text-gray-500 block mb-2">
                 Focus on
               </span>
@@ -308,7 +168,7 @@ export default function SingleProject({
             </div>
 
             {selectedProject.responsibilities && (
-              <div className="responsibilities w-1/2">
+              <div className="responsibilities w-full sm:w-1/2">
                 <span className="capitalize text-sm text-gray-500 block mb-2">
                   Responsibilities
                 </span>
@@ -325,8 +185,8 @@ export default function SingleProject({
           </div>
 
           {selectedProject.screens && selectedProject.screens.length > 0 && (
-            <div className="py-20 flex gap-8 overflow-x-hidden">
-              <div className="w-1/2 space-y-12">
+            <div className="py-20 flex flex-col sm:flex-row gap-8 overflow-x-hidden">
+              <div className="w-full sm:w-1/2 space-y-12">
                 {leftImages.map((screen, idx) => (
                   <img
                     key={`left-${idx}`}
@@ -337,8 +197,7 @@ export default function SingleProject({
                 ))}
               </div>
 
-              {/* Right Column */}
-              <div className="w-1/2 space-y-12 mt-20">
+              <div className="w-full sm:w-1/2 space-y-12 mt-20">
                 {rightImages.map((screen, idx) => (
                   <img
                     key={`right-${idx}`}

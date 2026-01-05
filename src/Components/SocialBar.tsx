@@ -3,7 +3,7 @@ import AnimatedBtn from "./AnimatedBtn";
 
 export default function SocialBar() {
   return (
-    <div className="flex justify-between uppercase px-4 py-4">
+    <div className=" justify-between uppercase px-4 py-4 hidden md:flex ">
       <span className="socialLink">
         {info.meta.location.city}, {info.meta.location.country.slice(0, 2)}
       </span>

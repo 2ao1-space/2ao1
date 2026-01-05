@@ -38,7 +38,7 @@ export default function useProjectsIntro({
             setCarouselActive(false);
             setActiveIndex(INITIAL_INDEX);
             gsap.to(items[0], {
-              x: 200,
+              x: innerWidth < 450 ? 10 : innerWidth < 700 ? 10 : 200,
               scale: 0.75,
               opacity: 1,
               zIndex: 10,
@@ -46,7 +46,7 @@ export default function useProjectsIntro({
               ease: "power2.out",
             });
             gsap.to(items[1], {
-              x: -200,
+              x: innerWidth < 450 ? -10 : innerWidth < 700 ? -10 : -200,
               scale: 0.75,
               opacity: 1,
               zIndex: 10,
@@ -84,7 +84,11 @@ export default function useProjectsIntro({
         { opacity: 1, y: 0, scale: 1, duration: 1 }
       )
       .to(items[0], { duration: 1 })
-      .to(items[0], { x: 300, scale: 0.9, duration: 0.5 })
+      .to(items[0], {
+        x: innerWidth < 450 ? 50 : innerWidth < 700 ? 20 : 300,
+        scale: 0.9,
+        duration: 0.5,
+      })
       .fromTo(
         items[1],
         { opacity: 0, y: 200, scale: 0.8 },
@@ -92,7 +96,11 @@ export default function useProjectsIntro({
         "-=0.5"
       )
       .to(items[1], { duration: 1 })
-      .to(items[1], { x: -300, scale: 0.9, duration: 0.5 })
+      .to(items[1], {
+        x: innerWidth < 450 ? -50 : innerWidth < 700 ? -20 : -300,
+        scale: 0.9,
+        duration: 0.5,
+      })
       .fromTo(
         items[2],
         { opacity: 0, y: 200, scale: 0.8 },

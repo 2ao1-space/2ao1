@@ -12,7 +12,15 @@ export default function PaginationBtns({
   return (
     <>
       {carouselActive && (
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-50">
+        <div
+          className={`absolute ${
+            innerWidth < 450
+              ? "bottom-20"
+              : innerWidth < 770
+              ? "bottom-5"
+              : "bottom-10"
+          }  left-1/2 -translate-x-1/2 flex gap-3 z-50`}
+        >
           {info.projects.map((_, i) => (
             <button
               key={i}

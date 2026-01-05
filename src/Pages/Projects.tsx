@@ -6,6 +6,7 @@ import SingleProject from "./SingleProject";
 import useModel from "../Hooks/useModel";
 import useCarousel from "../Hooks/useCarousel";
 import useProjectsIntro from "../Hooks/ProjectsIntroAnimation";
+import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 export default function Projects() {
   const INITIAL_INDEX = info.projects.length - 1;
@@ -48,10 +49,19 @@ export default function Projects() {
       className="relative h-screen"
       style={{ cursor: carouselActive ? "grab" : "default" }}
     >
-      <div className="absolute top-0 flex justify-center items-center">
-        <h3 className="text-[350px] leading-67.5 font-Become text-center py-20 w-full pointer-events-none select-none">
-          Selected Projects
+      <div className="absolute top-0 flex flex-col justify-center items-center h-screen w-full">
+        <h3 className="text-9xl md:text-[200px] lg:text-[350px] leading-24 md:leading-37.5 lg:leading-67.5 font-Become text-center py-20 w-full pointer-events-none select-none h-85 sm:h-120 md:h-105 lg:h-160">
+          Selected <br />
+          Projects
         </h3>
+
+        <span
+          className={`absolute ${
+            innerWidth < 450 ? "top-30" : "top-20"
+          }  lg:-bottom-90 lg:right-20 flex items-center gap-4 text-darkness/80 text-xs`}
+        >
+          <LuArrowLeft /> move <LuArrowRight />
+        </span>
       </div>
       <div className="relative h-screen overflow-hidden">
         {info.projects.map((card, i) => {

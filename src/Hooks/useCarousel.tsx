@@ -28,7 +28,12 @@ export default function useCarousel({
         if (diff < -total / 2) diff += total;
 
         gsap.to(item, {
-          x: diff * 260,
+          x:
+            innerWidth < 450
+              ? diff * 70
+              : innerWidth < 700
+              ? diff * 20
+              : diff * 260,
           y: 0,
           scale: diff === 0 ? 1 : 0.9,
           opacity: Math.abs(diff) > 1 ? 0 : 1,

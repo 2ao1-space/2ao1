@@ -27,7 +27,7 @@ export default function ProjectCard({
   return (
     <div
       key={i}
-      className="cardItem absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-180 h-96 rounded-md flex flex-col items-center justify-between text-white bg-cover bg-center group shadow-2xl overflow-hidden"
+      className="cardItem absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-70 sm:w-100 md:w-110 lg:w-160 h-90 sm:h-60 md:h-60 lg:h-96 rounded-md flex flex-col items-center justify-between text-white bg-cover bg-center group shadow-2xl overflow-hidden"
       style={{
         userSelect: "none",
         WebkitUserSelect: "none",
@@ -49,12 +49,15 @@ export default function ProjectCard({
       >
         <div className="w-full flex justify-between items-start relative">
           <div className="flex flex-col text-6xl pointer-events-none font-SecFont w-1/2 space-y-4">
-            <h5 ref={titleRef} className="whitespace-nowrap">
+            <h5
+              ref={titleRef}
+              className="text-3xl sm:text-3xl lg:text-7xl whitespace-nowrap"
+            >
               {card.title}
             </h5>
             <p
               ref={taglineRef}
-              className="text-sm text-white/90 pointer-events-none"
+              className="hidden lg:block text-sm text-white/90 pointer-events-none"
             >
               {card.tagline}
             </p>
@@ -62,14 +65,14 @@ export default function ProjectCard({
 
           <Link to={card.links.live} target="_blank">
             <div ref={arrowRef}>
-              <LuArrowUpRight className="text-8xl absolute -top-4 -right-4" />
+              <LuArrowUpRight className="text-4xl md:text-6xl lg:text-8xl absolute -top-4 -right-4" />
             </div>
           </Link>
         </div>
-        <div className="flex justify-between items-end">
+        <div className="flex justify-center sm:justify-end md:justify-between items-end">
           <p
             ref={descRef}
-            className="text-sm text-white/90 pointer-events-none w-1/3"
+            className="hidden lg:block text-sm text-white/90 pointer-events-none w-1/3"
           >
             {card.intent.short}
           </p>
