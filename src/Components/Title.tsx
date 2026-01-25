@@ -41,10 +41,12 @@ export default function Title({
         let fontSize = "445px";
         let lineHeight = "390px";
         let height = "350px";
+        let textAlign = "start";
 
         if (isMobile) {
-          fontSize = "190px";
+          fontSize = "200px";
           lineHeight = "170px";
+          textAlign = "center";
           height = "300px";
         } else if (isVeryShortDesktop) {
           fontSize = "225px";
@@ -67,9 +69,10 @@ export default function Title({
         gsap.set(pageTitleRef.current, {
           fontSize: fontSize,
           lineHeight: lineHeight,
+          textAlign: textAlign,
           height: height,
         });
-      }
+      },
     );
 
     return () => {
@@ -90,7 +93,7 @@ export default function Title({
     <h1
       ref={pageTitleRef}
       onClick={scrollToTop}
-      className={`cursor-pointer font-Become uppercase`}
+      className={`cursor-pointer font-Become uppercase text-center`}
     >
       {info.meta.name}
     </h1>
