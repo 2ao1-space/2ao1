@@ -13,7 +13,7 @@
       "country": "Egypt"
     },
     "social": [
-      { "name": "github", "url": "https://github.com/2ao1-1" },
+      { "name": "github", "url": "https://github.com/2ao1-space" },
       {
         "name": "linkedin",
         "url": "https://www.linkedin.com/in/ahmed-omran-2ao1/"
@@ -21,7 +21,7 @@
     ],
     "siteMap": [
       {
-        "path": "/Ahmed_Omran_Junior_Frontend_Developer.pdf",
+        "path": "/Ahmed_Omran_Frontend_Developer.pdf",
         "name": "Resume"
       },
       { "path": "about", "name": "About" },

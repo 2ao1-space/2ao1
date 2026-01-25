@@ -1,73 +1,148 @@
-# React + TypeScript + Vite
+# Ahmed Omran — Frontend Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern frontend portfolio focused on clean UI, smooth interactions, and scalable React architecture.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** https://www.2ao1.space  
+📍 Cairo, Egypt  
+📧 Email: omran.a.jr@gmail.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ About The Portfolio
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This portfolio represents how I think about frontend development — not just writing code, but crafting **clear, intentional user experiences**.
 
-## Expanding the ESLint configuration
+I focus on:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Clean and readable React code
+- Thoughtful UI structure
+- Smooth motion and interaction
+- Treating personal projects like real products
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠 Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Frontend**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React
+- TypeScript
+- JavaScript (ES6+)
+- Next.js
+- Tailwind CSS
+- GSAP
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Tools**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Git & GitHub
+- Vite
+- Figma
+
+---
+
+## 🧠 How I Work
+
+- Break designs into reusable, maintainable React components
+- Care deeply about UI clarity, spacing, and motion
+- Write code that’s easy to read and extend
+- Focus on predictable state and clean structure
+- Build projects with real-world product mindset
+
+---
+
+## 📂 Featured Projects
+
+### 📝 Todo List
+
+Minimal task management app focused on productivity and clean UI.
+
+**Focus**
+
+- Core React fundamentals
+- State management
+- Predictable UI behavior
+
+**Tech**
+
+- React
+- TypeScript
+- React Query
+- Tailwind CSS
+
+🔗 Live: https://todo-list.2ao1.space  
+🔗 Repo: https://github.com/2ao1-1/Todo-List
+
+---
+
+### 🍕 Crusto
+
+Modern restaurant ordering experience with a mobile-first approach.
+
+**Focus**
+
+- User flow & ordering logic
+- Cart state management
+- Responsive UI
+
+**Tech**
+
+- React
+- JavaScript
+- Redux
+- Tailwind CSS
+- Vite
+
+🔗 Live: https://crusto.2ao1.space  
+🔗 Repo: https://github.com/2ao1-1/Crusto-v2
+
+---
+
+### 🎨 Gallery
+
+A digital platform connecting artists, studios, and art lovers.
+
+**Focus**
+
+- Scalable UI architecture
+- Content-heavy layouts
+- Scroll-based animations
+
+**Tech**
+
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- GSAP
+
+🔗 Live: https://gallery.2ao1.space  
+🔗 Repo: https://github.com/2ao1-space/Gallery
+
+---
+
+## 🎯 Values
+
+- Clean UI over visual noise
+- Small details matter
+- Readable code beats clever code
+- Learning by building, not just watching
+
+---
+
+## 📄 Resume
+
+📥 [Download Resume](https://www.2ao1.space/Ahmed_Omran_Frontend_Developer.pdf)
+
+---
+
+## 🤝 Contact
+
+Interested in working together or discussing frontend ideas?
+
+- Email: omran.a.jr@gmail.com
+- GitHub: https://github.com/2ao1-space
+- LinkedIn: https://www.linkedin.com/in/ahmed-omran-2ao1/
+
+---
+
+> Built with passion for frontend, motion, and clean architecture.
