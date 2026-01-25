@@ -52,25 +52,36 @@ I focus on:
 
 ## 📂 Featured Projects
 
-### 📝 Todo List
+### 🕶️ Ammar Yasser Optics Store
 
-Minimal task management app focused on productivity and clean UI.
+A production-ready optics store platform built for a real optical center.
 
 **Focus**
 
-- Core React fundamentals
-- State management
-- Predictable UI behavior
+- Real-world e-commerce & service platform
+- Virtual try-on experience
+- Clean, scalable frontend architecture
+
+**Highlights**
+
+- Browse and purchase medical & sunglasses
+- Virtual try-on per product and color
+- Cart, orders, and checkout flows
+- Repairs requests and tracking system
+- Doctor-based discounts with prescription upload
+- Admin dashboard for products, orders, and approvals
 
 **Tech**
 
-- React
+- Next.js (App Router)
 - TypeScript
-- React Query
 - Tailwind CSS
+- GSAP
+- Zustand
+- Supabase
 
-🔗 Live: https://todo-list.2ao1.space  
-🔗 Repo: https://github.com/2ao1-1/Todo-List
+🔗 Live: https://ammar-yasser.2ao1.space  
+🔗 Repo: https://github.com/2ao1-space/Ammar_Yasser_Store
 
 ---
 

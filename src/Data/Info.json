@@ -73,31 +73,6 @@
 
   "projects": [
     {
-      "title": "Todo List",
-      "tagline": "A minimal task management app focused on clean UI and productivity.",
-      "focus": "Core React fundamentals, clean JavaScript logic, and predictable UI behavior.",
-      "intent": {
-        "short": "Demonstrates structured UI thinking and state handling.",
-        "details": "Built as part of a hiring process for a content-driven platform to demonstrate core React fundamentals, clean JavaScript logic, and the ability to organize frontend code clearly."
-      },
-      "thumbnail": "/images/ToDo/User_Dashboard.png",
-      "screens": [
-        "/images/ToDo/Login_Form.png",
-        "/images/ToDo/New_Todo.png",
-        "/images/ToDo/User_Dashboard.png"
-      ],
-      "responsibilities": [
-        "Implemented task CRUD functionality.",
-        "Managed server-state using React Query.",
-        "Focused on clean UI structure and usability."
-      ],
-      "techStack": ["React", "TypeScript", "React Query", "Tailwind CSS"],
-      "links": {
-        "live": "https://todo-list.2ao1.space",
-        "repo": "https://github.com/2ao1-1/Todo-List"
-      }
-    },
-    {
       "title": "Crusto",
       "tagline": "Modern restaurant ordering experience.",
       "focus": "Mobile-first UX, cart state management, and clear ordering flow.",
@@ -121,6 +96,41 @@
       "links": {
         "live": "https://crusto.2ao1.space",
         "repo": "https://github.com/2ao1-1/Crusto-v2"
+      }
+    },
+    {
+      "title": "Ammar Yasser Optics Store",
+      "tagline": "A full-featured optics store platform with virtual try-on experience.",
+      "focus": "Production-ready e-commerce platform combining product sales, services, and interactive UI.",
+      "intent": {
+        "short": "Built for a real optical center to manage sales, repairs, and doctor-based discounts.",
+        "details": "Designed and developed as a production-ready optics store platform allowing users to browse and buy glasses, try them virtually, request repairs, and apply for prescription-based discounts, while providing admins with full control over products, orders, and approvals."
+      },
+      "thumbnail": "/images/Optical/hero.png",
+      "screens": [
+        "/images/Optical/mainProduct.png",
+        "/images/Optical/try.png",
+        "/images/Optical/repair.png",
+        "/images/Optical/admin-dashboard.png"
+      ],
+      "responsibilities": [
+        "Built responsive and scalable frontend using Next.js App Router.",
+        "Implemented virtual try-on experience per product and color.",
+        "Integrated authentication, database, and storage using Supabase.",
+        "Developed cart, orders, repairs, and doctor discount workflows.",
+        "Focused on clean UI, smooth animations, and maintainable architecture."
+      ],
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP",
+        "Zustand",
+        "Supabase"
+      ],
+      "links": {
+        "live": "https://ammar-yasser.2ao1.space",
+        "repo": "https://github.com/2ao1-space/ammar-yasser-optics"
       }
     },
     {
